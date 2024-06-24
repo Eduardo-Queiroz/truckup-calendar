@@ -1,4 +1,4 @@
-# Welcome to your Truckup Calendar 👋
+# Welcome to Truckup Calendar 👋
 
 ## Get started
 
