@@ -2,13 +2,13 @@ import BottomSheet, {
   BottomSheetBackdrop,
   BottomSheetBackdropProps,
 } from "@gorhom/bottom-sheet";
-import { Box, Text } from "../../../../elements";
-import { Button } from "../../../../components/button";
-import { RefObject, useEffect, useMemo, useRef } from "react";
+import { Box, Text } from "@truckup/elements";
+import { Button } from "@truckup/components";
+import { useEffect, useMemo, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { TimeScrollPicker } from "../time-scroll-picker";
-import { StateInterface } from "../../../../store/reducers/types";
-import { Actions } from "../../../../store/reducers/schedule";
+import { StateInterface } from "@truckup/store/reducers/types";
+import { Actions } from "@truckup/store/reducers/schedule";
 import { WarningMessage } from "./WarningMessage";
 import { TimeBottomSheetHeader } from "./TimeBottomSheetHeader";
 
@@ -101,7 +101,7 @@ export const TimeBottomSheet = () => {
             alignItems="center"
             paddingVertical="xl"
             borderTopWidth={1}
-            borderColor="neutral700"
+            borderColor="neutral800"
           >
             <Button
               onPress={() => {

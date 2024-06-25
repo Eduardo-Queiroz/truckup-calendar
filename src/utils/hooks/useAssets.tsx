@@ -14,9 +14,6 @@ export const useAssets = () => {
         ["Lazzer-Medium"]: require("./../../../assets/fonts/Lazzer-Medium.otf"),
       });
 
-      // Artificially delay for one miliseconds to simulate a slow loading
-      // experience. remove before production
-      await new Promise((resolve) => setTimeout(resolve, 120));
       setAppIsReady(true);
     }
     prepare();
@@ -27,4 +24,6 @@ export const useAssets = () => {
       SplashScreen.hideAsync();
     }
   }, [appIsReady]);
+
+  return appIsReady;
 };

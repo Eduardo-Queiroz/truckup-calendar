@@ -1,11 +1,10 @@
-import { useState } from "react";
-import { HorizontalScrollPickerItemProps } from "../../../../components";
-import { Box, Text } from "../../../../elements";
+import { HorizontalScrollPickerItemProps } from "@truckup/components";
+import { Box } from "@truckup/elements";
 import Animated, {
   useAnimatedStyle,
   withTiming,
 } from "react-native-reanimated";
-import { useTheme } from "../../../../theme";
+import { useTheme } from "@truckup/theme";
 
 export const TimeItem = ({ item, active }: HorizontalScrollPickerItemProps) => {
   const {

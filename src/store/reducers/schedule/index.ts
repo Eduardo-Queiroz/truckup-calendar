@@ -1,6 +1,6 @@
 import { createActions, createReducer } from 'reduxsauce';
 import { ScheduleAction, ScheduleActionTypes, ScheduleStateInterface } from './types';
-import { isTimeAGreaterThanTimeB } from '../../../util/formatDate';
+import { isTimeAGreaterThanTimeB } from '../../../utils/helpers/formatDate';
 
 export const INITIAL_SCHEDULE_TIME = "6:00"
 export const FINAL_SCHEDULE_TIME = "20:00"

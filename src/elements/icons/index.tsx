@@ -3,7 +3,7 @@ import {
   createVariant,
   VariantProps,
 } from "@shopify/restyle";
-import { Theme } from "../../theme";
+import { Theme } from "@truckup/theme";
 import { CloseIcon } from "./close";
 import { GlobalIcon } from "./global";
 import { DangerIcon } from "./danger";

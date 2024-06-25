@@ -1,5 +1,4 @@
-import { Touchable } from "react-native";
-import { Box, Icon, IconProps } from "../../elements";
+import { Box, Icon, IconProps } from "@truckup/elements";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
 export const IconButton = ({

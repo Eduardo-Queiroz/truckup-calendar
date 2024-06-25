@@ -1,15 +1,13 @@
-import { Box, Text } from "../../../elements";
+import { useMemo } from "react";
+import { Box, Text } from "@truckup/elements";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { TimeBottomSheet } from "../container/time-bottomsheet";
 import { useDispatch, useSelector } from "react-redux";
-import { Actions } from "../../../store/reducers/schedule";
 import { StatusBar } from "expo-status-bar";
-import { Calendar } from "../../../components";
-import { StateInterface } from "../../../store/reducers/types";
-import { Schedule } from "../../../interfaces/Schedule";
-
-import { useMemo, useRef } from "react";
-import BottomSheet from "@gorhom/bottom-sheet";
+import { Calendar, ColorSchemeButton } from "@truckup/components";
+import { Actions } from "@truckup/store/reducers/schedule";
+import { StateInterface } from "@truckup/store/reducers/types";
+import { Schedule } from "@truckup/interfaces";
 
 const { selectDay } = Actions;
 export const InitialScreen = () => {
@@ -26,8 +24,17 @@ export const InitialScreen = () => {
     <Box backgroundColor="surface" flex={1}>
       <StatusBar style="light" />
       <SafeAreaView>
-        <Box alignItems="center" paddingVertical="l">
+        <Box
+          alignItems="center"
+          paddingVertical="m"
+          paddingHorizontal="l"
+          flexDirection="row"
+          justifyContent="space-between"
+        >
+          <Box width={35} />
           <Text variant="title">Availability</Text>
+          <Box width={35} />
+          {/* <ColorSchemeButton /> */}
         </Box>
         <Box marginTop="m">
           <Calendar

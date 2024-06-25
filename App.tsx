@@ -1,31 +1,42 @@
 import { ThemeProvider } from "@shopify/restyle";
-import { theme } from "./src/theme";
+import { lightTheme, theme } from "./src/theme";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import { useFonts } from "expo-font";
 import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { InitialScreen } from "./src/modules/initial/screens";
 import { Provider as ReduxProvider } from "react-redux";
 import * as SplashScreen from "expo-splash-screen";
-import * as Font from "expo-font";
 import { store } from "./src/store/config";
-import { useCallback, useEffect, useState } from "react";
-import { View } from "react-native";
-import { useAssets } from "./src/util/hooks/loadAssets";
+import { useAssets } from "./src/utils/hooks/useAssets";
+import {
+  ColorSchemeProvider,
+  useColorScheme,
+} from "./src/components/color-scheme";
 
 SplashScreen.preventAutoHideAsync();
 
+const Modules = () => {
+  const { colorScheme } = useColorScheme();
+  return (
+    <ThemeProvider theme={colorScheme === "light" ? theme : lightTheme}>
+      <InitialScreen />
+    </ThemeProvider>
+  );
+};
 export default function App() {
-  useAssets();
+  const appIsReady = useAssets();
+  if (!appIsReady) {
+    return null;
+  }
   return (
     <ReduxProvider store={store}>
       <GestureHandlerRootView style={{ flex: 1 }}>
         <BottomSheetModalProvider>
-          <ThemeProvider theme={theme}>
+          <ColorSchemeProvider>
             <SafeAreaProvider>
-              <InitialScreen />
+              <Modules />
             </SafeAreaProvider>
-          </ThemeProvider>
+          </ColorSchemeProvider>
         </BottomSheetModalProvider>
       </GestureHandlerRootView>
     </ReduxProvider>

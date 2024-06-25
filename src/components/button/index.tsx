@@ -1,11 +1,9 @@
 import {
-  createBox,
   createVariant,
   createRestyleComponent,
   VariantProps,
 } from "@shopify/restyle";
-import { Box } from "../../elements";
-import { buttonTypes, Theme, useTheme } from "../../theme";
+import { buttonTypes, Theme, useTheme } from "@truckup/theme";
 import {
   TextProps,
   TouchableOpacity,

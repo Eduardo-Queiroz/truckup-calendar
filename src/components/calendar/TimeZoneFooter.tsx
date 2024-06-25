@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Icon } from "../../elements";
+import { Box, Text, Icon } from "@truckup/elements";
 import { getCalendars } from "expo-localization";
 
 export const TimeZoneFooter = ({

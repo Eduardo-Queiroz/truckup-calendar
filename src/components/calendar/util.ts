@@ -1,5 +1,5 @@
 import moment from "moment";
-import { Theme } from "../../theme";
+import { Theme } from "@truckup/theme";
 
 export const formatScheduleToMarkedDays = (scheduleDays: string[], theme: Theme) => {
     const todayFormat = moment().format('YYYY-MM-DD')
@@ -13,6 +13,7 @@ export const formatScheduleToMarkedDays = (scheduleDays: string[], theme: Theme)
                     backgroundColor: theme.colors.primary,
                     width: 29,
                     height: 29,
+                    lineHeight: 20
                 },
             },
         };
@@ -27,9 +28,11 @@ export const formatScheduleToMarkedDays = (scheduleDays: string[], theme: Theme)
                         backgroundColor: theme.colors.danger,
                         width: 29,
                         height: 29,
+                        alignItems: "center"
                     },
                     text: {
                         color: theme.colors.onSurface,
+                        lineHeight: 20
                     }
                 },
             }
@@ -52,8 +55,7 @@ export const themeBuilder = ({ colors }: Theme) => ({
     textDisabledColor: colors.neutral600,
     arrowColor: "white",
     "stylesheet.calendar.main": {
-        container: {
-            flex: 1,
+        text: {
             color: "red",
         },
     },

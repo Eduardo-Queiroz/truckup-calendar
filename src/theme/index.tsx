@@ -114,5 +114,38 @@ export const theme = createTheme({
   },
 });
 
+export const lightTheme: Theme = {
+  ...theme,
+  colorScheme: "dark",
+  colors: {
+    ...theme.colors,
+    primary: "#00CC66",
+    onPrimary: "#010203",
+
+    surface: "#F4F4F4",
+    onSurface: "#010203",
+
+    surfaceVariant: "#F4F4F4",
+
+    surfaceContainer: "#AAAAAB",
+    onSurfaceContainer: "#F4F4F4",
+
+    danger: "#FF5F5F",
+
+    neutral50: "#F4F4F4",
+    neutral100: "#DFDFDF",
+    neutral200: "#AAAAAB",
+    neutral300: "#818384",
+    neutral400: "#757576",
+    neutral500: "#4C4E50",
+    neutral600: "#4F4F50",
+    neutral700: "#3B3C3D",
+    neutral800: "#AAAAAB",
+
+    disabledBackground: "#353638",
+    disabledTextColor: "#727374",
+  },
+};
+
 export type Theme = typeof theme;
 export const useTheme = useThemeRS<Theme>;

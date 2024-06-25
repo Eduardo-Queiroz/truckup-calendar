@@ -1,4 +1,4 @@
-import { Box, Text } from "../../elements";
+import { Box, Text } from "@truckup/elements";
 
 const WEEK_DATA = ["S", "M", "T", "W", "T", "F", "S"];
 export const WeekHeader = () => (

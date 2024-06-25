@@ -1,5 +1,5 @@
 import { Action } from '@reduxjs/toolkit';
-import { Schedule } from '../../../interfaces/Schedule';
+import { Schedule } from '@truckup/interfaces';
 
 export interface ScheduleStateInterface {
   isInvalidSelectedSchedule: boolean;

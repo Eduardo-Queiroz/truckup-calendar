@@ -1,11 +1,5 @@
-import { useEffect } from "react";
-import {
-  HorizontalScrollPicker,
-  HorizontalScrollPickerItemProps,
-} from "../../../../components/horizontal-scroll-picker";
-import { Box, Text } from "../../../../elements";
-import { useTimeIntervals } from "../../../../util/hooks/useTimeIntervals";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { HorizontalScrollPicker } from "@truckup/components";
+import { useTimeIntervals } from "@truckup/utils";
 import { TimeItem } from "./TimeItem";
 
 type TimeScrollPickerProps = {

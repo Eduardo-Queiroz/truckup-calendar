@@ -1,9 +1,9 @@
-import { CalendarList } from "react-native-calendars";
-import { useTheme } from "../../theme";
+import { CalendarList, DateData } from "react-native-calendars";
+import { useTheme } from "@truckup/theme";
 import moment from "moment";
 import React, { useState } from "react";
 import { LayoutAnimation } from "react-native";
-import { weekCountInMonth } from "../../util/formatDate";
+import { weekCountInMonth } from "@truckup/utils";
 import { WeekHeader } from "./WeekHeader";
 import { formatScheduleToMarkedDays, themeBuilder } from "./util";
 import { TimeZoneFooter } from "./TimeZoneFooter";
@@ -31,17 +31,19 @@ export const Calendar = ({ onDayPress, scheduleDays }: CalendarProps) => {
     <>
       <WeekHeader />
       <CalendarList
+        key={theme.colorScheme}
         pagingEnabled
         markingType="custom"
-        onMonthChange={({ year, month }) => {
-          updateCalendarHeight(year, month);
+        onVisibleMonthsChange={(months: DateData[]) => {
+          if (months.length == 1)
+            updateCalendarHeight(months[0].year, months[0].month);
         }}
         style={{ height: DEFAULT_CALENDAR_SIZE }}
         calendarHeight={DEFAULT_CALENDAR_SIZE}
         pastScrollRange={0}
         theme={themeBuilder(theme)}
         minDate={moment().format("YYYY-MM-DD")}
-        onDayPress={({ dateString }) => onDayPress(dateString)}
+        onDayPress={({ dateString }: DateData) => onDayPress(dateString)}
         markedDates={formatScheduleToMarkedDays(scheduleDays, theme)}
         showWeekNumbers={false}
       />

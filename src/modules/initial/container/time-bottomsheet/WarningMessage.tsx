@@ -1,11 +1,8 @@
 import React, { useEffect } from "react";
-import { Box, Icon, Text } from "../../../../elements";
+import { Box, Icon, Text } from "@truckup/elements";
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
-  withSpring,
-  withDecay,
-  withDelay,
   withTiming,
 } from "react-native-reanimated";
 
