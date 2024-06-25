@@ -51,8 +51,9 @@ https://drive.google.com/file/d/14btC2SWUOfiTqS9jlH4PJ_jHho0fAa8-/view?usp=shari
 
 ## screenshots
 
+
 <img src="https://github.com/Eduardo-Queiroz/truckup-calendar/assets/37419591/fc093856-c387-4f8f-9a10-4505f2c35531" alt="drawing" width="200"/>
-<img src="https://github.com/Eduardo-Queiroz/truckup-calendar/assets/37419591/21dd33e0-70f1-46b7-b3dc-33bf7b09ce08" alt="drawing" width="200"/>
+<img src="https://github.com/Eduardo-Queiroz/truckup-calendar/assets/37419591/5a97518d-0ca2-4058-b88a-752f7ac78cd4" alt="drawing" width="200"/>
 <img src="https://github.com/Eduardo-Queiroz/truckup-calendar/assets/37419591/1f68630e-58a0-48ff-91e0-d9bc62e8b151" alt="drawing" width="200"/>
 <img src="https://github.com/Eduardo-Queiroz/truckup-calendar/assets/37419591/321850c4-59ff-4d5a-ad89-9f5ef24aaa8f" alt="drawing" width="200"/>
 
