@@ -35,4 +35,8 @@ In the output, you'll find options to open the app in a
 
 ## record
 
+standard behavior
 https://drive.google.com/file/d/1sv4bSOP4NQk_4ovXH3qJsujTlRfv_m-t/view?usp=drive_link
+
+light mode switch
+https://drive.google.com/file/d/14btC2SWUOfiTqS9jlH4PJ_jHho0fAa8-/view?usp=sharing
