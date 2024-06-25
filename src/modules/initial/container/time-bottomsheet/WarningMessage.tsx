@@ -15,7 +15,7 @@ export const WarningMessage = ({ isVisible }: { isVisible: boolean }) => {
     if (isVisible) {
       translateY.value = withTiming(0, { duration: 300 });
       opacity.value = withTiming(1, { duration: 300 });
-      height.value = withTiming(80, { duration: 300 });
+      height.value = withTiming(70, { duration: 300 });
     } else {
       translateY.value = withTiming(50, { duration: 300 });
       opacity.value = withTiming(0, { duration: 300 });
@@ -32,13 +32,13 @@ export const WarningMessage = ({ isVisible }: { isVisible: boolean }) => {
   });
   return (
     <Animated.View style={[animatedStyle]}>
-      <Box padding="l">
+      <Box padding="l" paddingTop="m">
         <Box flexDirection="row">
           <Box paddingRight="s" paddingTop="xs">
             <Icon variant="small" name="danger" />
           </Box>
           <Text variant="danger">
-            Select an end time that`s later than you start time.
+            Select an end time that`s later than your start time.
           </Text>
         </Box>
       </Box>

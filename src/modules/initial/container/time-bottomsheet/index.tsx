@@ -54,7 +54,7 @@ export const TimeBottomSheet = () => {
       enablePanDownToClose
       ref={bottomSheetRef}
       index={-1}
-      snapPoints={["60%"]}
+      snapPoints={["62%"]}
       handleComponent={null}
       onClose={() => {
         dispatch(clearSchedule());
